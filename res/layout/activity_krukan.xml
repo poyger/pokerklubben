@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+ 
+    <RadioGroup
+        android:id="@+id/krukanTurneringar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+ 
+        <RadioButton
+            android:id="@+id/krukanMandag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/krukanMandag" 
+            android:checked="true" />
+ 
+        <RadioButton
+            android:id="@+id/krukanTisdag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/krukanTisdag" 
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/krukanOnsdag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/krukanOnsdag" 
+            android:checked="true" />
+        
+        <RadioButton
+            android:id="@+id/krukanTorsdag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/krukanTorsdag" 
+            android:checked="true" />
+        
+        <RadioButton
+            android:id="@+id/krukanFredag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/krukanFredag" 
+            android:checked="true" />
+        
+        <RadioButton
+            android:id="@+id/krukanLordag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/krukanLordag" 
+            android:checked="true" />
+        
+        <RadioButton
+            android:id="@+id/krukanSondag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/krukanSondag" 
+            android:checked="true" />
+                
+    </RadioGroup>
+ 
+    <Button
+        android:id="@+id/krukanAnmallTurnering"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/anmall" />
+ 
+</LinearLayout>

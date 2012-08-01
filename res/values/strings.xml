@@ -1,0 +1,24 @@
+<resources>
+
+    <string name="app_name">Pokerklubben</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">Pokerklubben</string>
+    <string name="title_activity_oden">Oden</string>
+    
+    
+    <!-- Krukan Start -->
+    <string name="title_activity_krukan">Krukan</string>       
+    <string name="krukanMandag">Måndagslaxen	Inköp 1100, NLH</string>
+    <string name="krukanTisdag">Sviten Special	Inköp 400/200, PLO/Mörkpoker</string>
+    <string name="krukanOnsdag">2X Chance	Inköp 600 + 600, NLH</string>
+    <string name="krukanTorsdag">Partinöten	Inköp 400/200, NLH</string>    
+    <string name="krukanFredag">Fredagsdeepstack	Inköp 600, NLH, 15k startstack</string>
+    <string name="krukanLordag">2X Chance	Inköp 1100 + 1100, NLH</string>
+    <string name="krukanSondag">Triple Stack-Söndag	Inköp 600, PLO, 3 stackar med 7.5k</string>  
+	<!-- Krukan End -->
+
+	<!-- Common Start -->
+    <string name="anmall">Anmäll</string>        
+	<!-- Common End -->
+
+</resources>
