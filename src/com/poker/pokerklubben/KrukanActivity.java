@@ -1,14 +1,13 @@
 package com.poker.pokerklubben;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
-import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Toast;
 
 public class KrukanActivity extends Activity {
 	
@@ -25,22 +24,18 @@ public class KrukanActivity extends Activity {
         buttonKrukan.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 		    // get selected radio button from radioGroup
-			int selectedId = krukanTurneringar.getCheckedRadioButtonId();
- 
+			int selectedId = krukanTurneringar.getCheckedRadioButtonId(); 
 			// find the radiobutton by returned id
 			krukanTurnering = (RadioButton) findViewById(selectedId);
-			
-			// TODO Plockat ut vald tuneringar, nu ska vi skickat ett SMS och anmälla oss till denna 
-			// Turnering
-			Toast.makeText(KrukanActivity.this,
-					krukanTurnering.getText(), Toast.LENGTH_SHORT).show();
-            
+			// Skicka iväg en sms intent.			
+            sendSmsIntent(krukanTurnering.getText());					
             }
-        });
-
-    
+        });    
+    }    
+    private void sendSmsIntent(CharSequence charSequence){
+		Uri uri = Uri.parse("smsto:" + getString(R.string.krukanTelefonNummer)); 
+		Intent intent = new Intent(Intent.ACTION_SENDTO, uri); 
+		intent.putExtra("sms_body", charSequence);   
+		startActivity(intent);
     }
-
- 
-
 }
