@@ -2,8 +2,10 @@ package com.poker.pokerklubben;
 
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -33,9 +35,10 @@ public class KrukanActivity extends Activity {
         });    
     }    
     private void sendSmsIntent(CharSequence charSequence){
-		Uri uri = Uri.parse("smsto:" + getString(R.string.krukanTelefonNummer)); 
+    	SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);	
+    	Uri uri = Uri.parse("smsto:" + getString(R.string.krukanTelefonNummer)); 
 		Intent intent = new Intent(Intent.ACTION_SENDTO, uri); 
-		intent.putExtra("sms_body", charSequence);   
+		intent.putExtra("sms_body", "Anmäller " + sharedPrefs.getString("namnPref", "defValue") + " till: \"" + charSequence + "\"");   
 		startActivity(intent);
     }
 }

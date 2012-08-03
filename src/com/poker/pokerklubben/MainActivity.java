@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -31,12 +32,21 @@ public class MainActivity extends Activity {
         });
     }
 
-    /* This is for settings menu
+    /* This is for settings menu*/
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.activity_main, menu);
         return true;
     }
-    */
     
+    public boolean onOptionsItemSelected (MenuItem item){    	
+    	//check selected menu item
+    	if(item.getItemId() == R.id.menu_settings)
+    	{
+            Intent settingsActivity = new Intent(getBaseContext(),PreferencesActivity.class);
+            startActivity(settingsActivity);
+    		return true;
+    	}            	
+    	return false;
+    }	
 }
